@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>News Api</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="navbar">
+        <div class="nav_logo">
+          <div class="logo" onclick="reload()">
+            <h1>ChronicleConnect</h1>
+          </div>
+        </div>
+        <div class="search">
+          <input id="search-input"
+            placeholder="What do you want to know today?"
+            class="search-input"
+          />
+          <button id="search-button"class="Search_btn">Search</button>
+        </div>
+
+        <div class="topics">
+          <p>
+            <a class="nav-item" id="politics" href="#" id="politics" onclick="onNavItemClick('politics')">Politics</a>
+          </p>
+          <p>
+            <a class="nav-item" id="sports"  href="#" onclick="onNavItemClick('sports')">Sports</a>
+          </p>
+          <p>
+            <a class="nav-item" id="economy"  href="#" onclick="onNavItemClick('economy')">Economy</a>
+          </p>
+          <p>
+            <a class="nav-item" id="foreignAffairs"  href="#" onclick="onNavItemClick('foreignAffairs')">Foreign Affairs</a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+        <div class="extra">
+      <div class="cards_container container" id="cards-container">
+    </div>
+    </div>
+    <template id="news-template-card">
+      <div class="card">
+          <div class="card-header">
+            <img
+              src="https://via.placeholder.com/400x200"
+              alt="news-image"
+              id="news_img"
+            />
+          </div>
+          <div class="card-content">
+            <h3 id="news-title">This is the Title</h3>
+            <h6 class="news-source" id="news-source">End Gadget 26/08/2023</h6>
+            <p class="news-desc" id="news-desc">
+              Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae
+              blanditiis voluptates iure a eveniet delectus corporis labore
+              harum repudiandae aliquam!
+            </p>
+          </div>
+      </template>
+        </div>
+</main>
+      
+       
+      <footer>
+        <div class="pagination">
+           
+          <a  class="page" id="prev" href="#" onclick="onPageClick(this)">prev</a>
+          <a class="page" id= 1 href="#" onclick="onPageClick(this)">1</a>
+          <a  class="page" id=2 href="#" onclick="onPageClick(this)">2</a>
+          <a class="page" id=3 href="#" onclick="onPageClick(this)">3</a>
+          <a class="page" id=4 href="#" onclick="onPageClick(this)">4</a>
+          <a class="page" id=5 href="#" onclick="onPageClick(this)">5</a>
+          <a class="page" id="next" href="#" onclick="onPageClick(this)">next</a>
+
+        </div>
+      </footer>
+    
+  </body>
+  <script src="script.js"></script>
+</html>
